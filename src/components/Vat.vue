@@ -55,10 +55,10 @@
                 </div>
             </div>
             <div class="row col">
-                Montant TTC : &nbsp; <strong>{{ valeurTTC }} €</strong>
+                Montant TTC : &nbsp; <strong>{{ valeurTTC | twoDecimals}} €</strong>
             </div>
             <div class="row col">
-                Montant de la TVA : &nbsp; <strong>{{valeurTVA}} €</strong>
+                Montant de la TVA : &nbsp; <strong>{{valeurTVA | twoDecimals}} €</strong>
             </div>
         </div>
     </div>
@@ -78,10 +78,15 @@ export default {
     },
     computed: {
         valeurTTC: function() {
-            return parseFloat(this.valeurHT + this.valeurHT * this.taux).toFixed(2);
+            return this.valeurHT + this.valeurTVA;
         },
         valeurTVA: function() {
-            return parseFloat(this.valeurHT * this.taux).toFixed(2);
+            return this.valeurHT * this.taux;
+        }
+    },
+    filters: {
+        twoDecimals: function(value) {
+            return parseFloat(value).toFixed(2)
         }
     }
 };
