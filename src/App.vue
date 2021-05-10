@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container" id="app">
+      <div class="row justify-content-center text-center">
+            <div class="col-6">
+                <img alt="Vue logo" src="./assets/tva.png" class="w-50 mb-4">
+                <Vat msg="Caculate VAT"/>
+            </div>
+      </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Vat from './components/Vat.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Vat
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    body{
+        padding-top: 2rem;
+    }
 </style>
