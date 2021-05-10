@@ -78,10 +78,10 @@ export default {
     },
     computed: {
         valeurTTC: function() {
-            return parseFloat(this.valeurHT) + this.valeurHT * parseFloat(this.taux);
+            return parseFloat(this.valeurHT + this.valeurHT * this.taux).toFixed(2);
         },
         valeurTVA: function() {
-            return this.valeurHT * parseFloat(this.taux);
+            return parseFloat(this.valeurHT * this.taux).toFixed(2);
         }
     }
 };
