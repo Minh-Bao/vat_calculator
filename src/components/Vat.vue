@@ -55,10 +55,10 @@
                 </div>
             </div>
             <div class="row col">
-                Montant TTC : &nbsp; <strong>{{ valeurTTC | twoDecimals}} €</strong>
+                Montant TTC : &nbsp; <strong>{{ valeurTTC | currency}} €</strong>
             </div>
             <div class="row col">
-                Montant de la TVA : &nbsp; <strong>{{valeurTVA | twoDecimals}} €</strong>
+                Montant de la TVA : &nbsp; <strong>{{valeurTVA | currency}} €</strong>
             </div>
         </div>
     </div>
